@@ -1,0 +1,519 @@
+body {
+  background: #c8c8c8;
+}
+.image-wrapper {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  margin: 30vh auto;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+.image-1 {
+  clip-path: polygon(0 0, 0 32%, 28% 0);
+  transform: translate(-10px, -10px);
+  transition: transform 300ms ease;
+  transform-origin: top;
+}
+.image-wrapper:hover .image-1 {
+  transform: translate(0, 0);
+}
+
+.image-2 {
+  clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
+  transform: translate(-30px, 5px);
+  transition: transform 300ms ease;
+}
+.image-wrapper:hover .image-2 {
+  transform: translate(0, 0);
+}
+
+.image-3 {
+  clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
+  transform: translate(-15px, -10px);
+  transition: transform 300ms ease;
+}
+.image-wrapper:hover .image-3 {
+  transform: translate(0, 0);
+}
+
+.image-4 {
+  clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
+  transform: translate(-32px, 5px);
+  transition: transform 300ms ease;
+  transform-origin: top;
+}
+.image-wrapper:hover .image-4 {
+  transform: translate(0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/* CSS VARIABLE*/
+:root {
+  --navbar-height: 59px;
+}
+/*NAVIGATION BAR*/
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: transparent;
+  overflow: hidden;
+  padding-left: 36px;
+  border-bottom: 1px solid gray;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #201f1f;
+  text-align: center;
+  padding: 14px 12px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Right-aligned section inside the top navigation */
+.pnav-right {
+  float: right;
+}
+
+
+.pnav {
+  background-color: transparent;
+  overflow: hidden;
+  padding-left: 36px;
+}
+
+/* Style the links inside the navigation bar */
+.pnav a {
+  float: left;
+  color: darkred;
+  text-align: center;
+  padding: 5px 12px;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+#navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0px;
+}
+#navbar::before {
+  content: "";
+  background-color: rgb(10, 3, 8);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+/*NAVIGATION BAR:Logo and Image */
+
+#logo {
+  margin: 10px 34px;
+}
+#logo img {
+  height: 50px;
+  margin: -50px 0px;
+  border-radius: 13px;
+}
+
+/*NAVIGATION BAR:List Styling*/
+/* #navbar ul {
+  display: flex;
+}
+
+#navbar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+#navbar ul li a {
+  color: darkred;
+  display: block;
+  padding: 2px 22px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+#navbar ul li a:hover {
+  color: rgb(231, 228, 240);
+  background-color: rgb(8, 1, 1);
+}*/
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 1.3rem;
+  color: darkred;
+  padding: 4px 22px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  color: black;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*Home section*/
+#Home {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 200px;
+  height: 578px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+#Home::before {
+  content: "";
+  position: absolute;
+  background: url("../img/piza.jpg"); /*no-repeat center center/cover*/
+  height: 642px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.9;
+}
+#Home h1 {
+  color: black;
+  text-align: center;
+}
+#Home p {
+  color: black;
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+/* services section*/
+#services {
+  margin: 34px;
+  display: flex;
+}
+#services .box {
+  border: 2px solid brown;
+  padding: 35px;
+  margin: 3px 6px;
+  border-radius: 28px;
+  background: coral;
+}
+
+#services .box img {
+  height: 156px;
+  margin: auto;
+  display: block;
+}
+#services .box p {
+  font-family: "Bree Serif", serif;
+}
+/*client section*/
+#client-section {
+  height: 344px;
+  position: relative;
+}
+#client-section::before {
+  content: "";
+  position: absolute;
+  background: url("../img/bf1.jpg");
+  width: 100%;
+  height: 54;
+  z-index: -1;
+  opacity: 0.3;
+}
+#clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.client-item {
+  padding: 34px;
+}
+#clients img {
+  height: 124px;
+}
+/*contact section*/
+
+/*utility classes*/
+.h-primary {
+  font-family: "sans-serif";
+  font-size: 3rem;
+  padding: 15px;
+}
+
+.head1 {
+  font-family: "Brush Script MT", "Brush Script Std", "cursive";
+  font-size: 2.5rem;
+  color: rgb(46, 45, 43);
+}
+.btn {
+  padding: 15px 37px;
+  border: 2px solid rgb(17, 15, 15);
+  border-radius: 15px;
+  background-color: rgb(136, 95, 218);
+  color: black;
+  margin: 65px;
+  font-size: 1.4rem;
+  font-style: oblique;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(103 49 211);
+}
+.center {
+  text-align: center;
+}
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+
+  margin: 3rem;
+  padding: 3px;
+}
+.img1 {
+  height: 15rem;
+  width: 15rem;
+  margin-top: 0px;
+}
+.card-body {
+  margin: 0px;
+  padding: 19px;
+  border: 2px solid green;
+  width: 80rem;
+  height: 198px;
+background-color: floralwhite;
+}
+.card-title {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: green;
+  margin-bottom: 0.7rem;
+}
+.opnav {
+  margin: 0px;
+}
+.opnav a {
+  color: #0c0b0b;
+  text-align: center;
+  padding: 14px 0px;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 11px;
+}
+.card-text {
+  color: #666363;
+  line-height: 1.5rem;
+  margin-top: 10px;
+}
+.btn1 {
+  padding: 8px 18px;
+  border: 2px solid green;
+  color: green;
+  border-radius: 2px;
+  margin-top: 17px;
+  font-size: 1rem;
+  font-style: oblique;
+  cursor: pointer;
+  background: floralwhite;
+}
+.btn1:hover {
+  background-color: green;
+  color: white;
+}
+.footer1 > * {
+  flex:  1 100%;
+}
+
+
+
+
+.nav__title {
+  font-weight: 500;
+  font-size: 15px;
+  color:green;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+	flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: #999;
+}
+.nav__ul a i {
+  color: green;
+}
+.nav__ul--extra {
+  column-count: 1;
+  column-gap: 1.25em;
+}
+
+  
+
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 2;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+    
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+.footer{
+  background-color: #0c0b0b;
+  padding: 50px;
+  border-bottom: 1px solid rgb(48, 46, 46);
+}
+
+/* Add some padding and a grey background color to containers */
+.container {
+  padding: 10px;
+  padding-top: 0px;
+
+}
+
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+/* Add margins to the checkbox */
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: green;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+.newsletter{
+  font-weight: 500;
+  font-size: 15px;
+  color:green;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.newsletterp{
+  color:#999;
+}
+.schedule{
+  background-color: green;
+  padding: 4rem;
+  padding-top: 7rem;
+  margin-top: 35rem;
+}
+
+table, th, td {
+  border-right: 1px solid rgb(194, 187, 187);
+  padding: 4px;
+  border-collapse: collapse;
+  color: rgb(194, 187, 187);
+}
+.tbl{
+  margin-bottom: 1rem;
+}
+.htbl{
+  margin: -40px;
+  margin-left: 20px;
+  color:rgb(194, 187, 187);
+}
+.table1 td{
+  padding: 14px 30px;
+}
+.table1{
+  margin-right: 3.5rem;
+}
+

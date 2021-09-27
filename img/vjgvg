@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Quiz Competition</title>
+<link rel="icon" href="images/images.jpg">
+<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<style>
+.links{
+display:block;text-decoration:none;
+color:white;
+padding:10px;
+text-center;
+border-bottom:1px solid black;
+
+}
+.links:hover{
+background-color:pink;
+text-decoration:none;
+color:black;
+border-radius: 25px;
+}
+</style>
+<body >
+<div class="container-fluid "style="background-color:pink">
+<div class="row">
+<div class="col-sm-2 bg-danger p-0" style="min-height:100vh;">
+<img src="images/logo.jpg" style="width:100%">
+<a href="Home" class="links">Home</a>
+<a href="categories.jsp" class="links">Categories</a>
+<a href="Home" class="links">Questions</a>
+<a href="Home" class="links">Students</a>
+<a href="Home" class="links">Exams</a>
+<a href="Home" class="links">Change Password</a>
+<a href="Logout" class="links">Logout</a>
+</div>
+<div class="col-sm-10 bg-pink p-0">
+<div class="jumbotron m-0 p-0 text-center text-white bg-dark ">
+<h2>Welcome to Admin Dashboard</h2>
+<h3 m-4>Welcome! <%=session.getAttribute("uname") %></h3>
+</div>
+</div>
+</div>
+</body>
+</html>
